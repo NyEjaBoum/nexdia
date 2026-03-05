@@ -98,6 +98,93 @@ ul { list-style: none; }
   .hero-stats { flex-direction: row !important; gap: 40px !important; }
 }
 
+/* Tablet (768px - 1024px) */
+@media (max-width: 768px) {
+  body { font-size: 15px; }
+  h1 { font-size: 2.5rem !important; }
+  h2 { font-size: 1.8rem !important; }
+  h3 { font-size: 1.2rem !important; }
+  
+  section { padding: 60px 20px !important; }
+  .grid-3 { grid-template-columns: repeat(2, 1fr) !important; }
+  .grid-4 { grid-template-columns: repeat(2, 1fr) !important; }
+  .grid-2 { grid-template-columns: 1fr !important; }
+  .grid-2-r { grid-template-columns: 1fr !important; gap: 40px !important; }
+  
+  .hero-content { padding: 0 20px !important; }
+  .hero-stats { flex-direction: column !important; gap: 20px !important; }
+  .btn-terra { padding: 14px 28px !important; font-size: 14px !important; }
+  .btn-yellow { padding: 14px 28px !important; font-size: 14px !important; }
+  
+  .pack-card { padding: 24px 16px !important; }
+  .comparison-table { font-size: 13px !important; }
+}
+
+/* Mobile (480px - 767px) */
+@media (max-width: 480px) {
+  body { font-size: 14px; }
+  h1 { font-size: 1.8rem !important; line-height: 1.1 !important; }
+  h2 { font-size: 1.4rem !important; }
+  h3 { font-size: 1.1rem !important; }
+  
+  section { padding: 40px 16px !important; }
+  .grid-3 { grid-template-columns: 1fr !important; }
+  .grid-4 { grid-template-columns: 1fr !important; }
+  .grid-2 { grid-template-columns: 1fr !important; }
+  .grid-2-r { grid-template-columns: 1fr !important; gap: 30px !important; }
+  
+  .hero-content { padding: 0 16px !important; }
+  .hero-stats { flex-direction: column !important; gap: 16px !important; }
+  .stat-item { text-align: center; }
+  
+  .btn-terra { padding: 12px 24px !important; font-size: 13px !important; width: 100% !important; }
+  .btn-yellow { padding: 12px 24px !important; font-size: 13px !important; width: 100% !important; }
+  .btn-ghost { padding: 12px 24px !important; font-size: 13px !important; width: 100% !important; }
+  
+  .pack-card { padding: 20px 14px !important; margin: 0 !important; }
+  .pack-header { padding: 12px 0 !important; }
+  .pack-price { font-size: 2rem !important; }
+  .comparison-table { font-size: 12px !important; padding: 12px 8px !important; }
+  .comparison-table th, .comparison-table td { padding: 10px 6px !important; }
+  
+  .ticker-item { font-size: 14px !important; padding: 12px 20px !important; }
+  
+  .testimonial-card { padding: 20px 14px !important; }
+  .testimonial-quote { font-size: 13px !important; line-height: 1.6 !important; }
+  
+  .com-feat { gap: 12px !important; padding: 14px 14px !important; }
+  .com-feat svg { min-width: 32px !important; }
+  
+  .guarantee-card { padding: 20px 14px !important; }
+  .guarantee-icon { width: 40px !important; height: 40px !important; }
+  
+  .process-step { padding: 16px 12px !important; }
+  .process-num { width: 32px !important; height: 32px !important; font-size: 14px !important; }
+  
+  .faq-btn { padding: 14px 12px !important; font-size: 13px !important; }
+  .faq-answer { padding: 0 12px 12px !important; font-size: 13px !important; }
+  
+  .waFab { width: 50px !important; height: 50px !important; bottom: 20px !important; right: 20px !important; }
+  .waFab svg { width: 24px !important; height: 24px !important; }
+  
+  .contact-card { padding: 20px 14px !important; }
+  .social-links { gap: 8px !important; flex-wrap: wrap !important; }
+  .social-btn { padding: 10px 16px !important; font-size: 12px !important; }
+}
+
+/* Très petit mobile (< 380px) */
+@media (max-width: 380px) {
+  h1 { font-size: 1.5rem !important; }
+  h2 { font-size: 1.2rem !important; }
+  
+  section { padding: 30px 12px !important; }
+  .btn-terra { padding: 10px 20px !important; font-size: 12px !important; }
+  .btn-yellow { padding: 10px 20px !important; font-size: 12px !important; }
+  
+  .pack-price { font-size: 1.6rem !important; }
+  .grid-3 { grid-template-columns: 1fr !important; gap: 12px !important; }
+}
+
 @media (max-width: 768px) {
   .grid-5 { grid-template-columns: repeat(2, 1fr) !important; }
   .grid-4 { grid-template-columns: 1fr !important; }
