@@ -1,0 +1,114 @@
+/* ══════════════════════════════════════════════════════════════
+   NEXDIA — Styles globaux & animations
+   Reproduit exactement le design de nexdia.jsx
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Reset */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Overpass', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #FDFAF4;
+  color: #2B1201;
+  overflow-x: hidden;
+}
+a { text-decoration: none; color: inherit; }
+button { font-family: inherit; }
+ul { list-style: none; }
+
+/* ── Animations */
+@keyframes hdot {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(74,222,128,.3); }
+  50% { box-shadow: 0 0 0 7px rgba(74,222,128,.08); }
+}
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes ring {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.55); }
+}
+@keyframes panelIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Ticker */
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: slide 24s linear infinite;
+}
+.ticker-track:hover { animation-play-state: paused; }
+
+/* ── Interactive hovers */
+.nav-link:hover { background: #F5E8C4; color: #AD3423; }
+.prob-card:hover { background: rgba(173,52,35,.18); border-color: rgba(173,52,35,.4); transform: translateY(-8px); }
+.pack-card:hover { transform: translateY(-10px); background: rgba(255,243,214,.07); border-color: rgba(248,199,58,.25); }
+.pack-featured:hover { transform: translateY(-12px); box-shadow: 0 30px 70px rgba(248,199,58,.25); }
+.sol-step:hover { background: #F5E8C4; transform: translateX(4px); }
+.com-feat:hover { transform: translateX(6px); box-shadow: 0 6px 24px rgba(43,18,1,.08); }
+.guarantee:hover { background: #F5E8C4; transform: translateY(-2px); }
+.testi-card:hover { background: rgba(255,243,214,.07); transform: translateY(-6px); border-color: rgba(248,199,58,.2); }
+.partner:hover { background: rgba(248,199,58,.1); border-color: rgba(248,199,58,.2); color: #F8C73A; }
+.btn-terra:hover { background: #8A2518; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(173,52,35,.4); }
+.btn-yellow:hover { background: #D4A520; transform: translateY(-2px); }
+.btn-white:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(0,0,0,.2); }
+.btn-ghost:hover { background: rgba(255,255,255,.18); transform: translateY(-2px); }
+.btn-outline:hover { background: #AD3423; color: #fff; }
+.social-btn:hover { background: #AD3423; border-color: #AD3423; }
+.footer-link:hover { color: #F8C73A; }
+.panel-in { animation: panelIn .4s ease; }
+
+/* ── WhatsApp FAB */
+.wa-fab:hover { transform: scale(1.08); box-shadow: 0 12px 44px rgba(37,211,102,.65); }
+.wa-fab:hover .wa-tooltip { opacity: 1 !important; }
+.wa-fab::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 2px solid rgba(37,211,102,.3);
+  animation: ring 2.5s ease-out infinite;
+}
+
+/* ── Nuxt page transitions */
+.page-enter-active, .page-leave-active { transition: all 0.3s ease; }
+.page-enter-from { opacity: 0; transform: translateY(20px); }
+.page-leave-to { opacity: 0; transform: translateY(-20px); }
+
+/* ── Scroll reveal utility */
+.sr-hidden { opacity: 0; transform: translateY(50px); }
+.sr-visible { opacity: 1; transform: translateY(0); transition: opacity .7s ease, transform .7s ease; }
+
+/* ── FAQ accordion */
+.faq-item { border-bottom: 1px solid rgba(43,18,1,.08); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height .35s ease, padding .35s ease; padding: 0 20px; }
+.faq-answer.open { max-height: 500px; padding: 0 20px 20px; }
+
+/* ── Responsive */
+@media (max-width: 1024px) {
+  .grid-5 { grid-template-columns: repeat(3, 1fr) !important; }
+  .grid-4 { grid-template-columns: repeat(2, 1fr) !important; }
+  .grid-2 { grid-template-columns: 1fr !important; }
+  .grid-2-r { grid-template-columns: 1fr !important; }
+  .hero-stats { flex-direction: row !important; gap: 40px !important; }
+}
+
+@media (max-width: 768px) {
+  .grid-5 { grid-template-columns: repeat(2, 1fr) !important; }
+  .grid-4 { grid-template-columns: 1fr !important; }
+  .nav-links-desktop { display: none !important; }
+  #hamb { display: flex !important; }
+  .hero-grid { grid-template-columns: 1fr !important; }
+  .hero-title { font-size: clamp(48px, 12vw, 80px) !important; }
+  .section-title { font-size: clamp(36px, 8vw, 64px) !important; }
+}
+
+@media (max-width: 480px) {
+  .grid-5 { grid-template-columns: 1fr !important; }
+  .hero-title { font-size: clamp(40px, 14vw, 64px) !important; }
+}

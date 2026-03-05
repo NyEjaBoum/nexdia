@@ -1,0 +1,18 @@
+{
+  "name": "nexdia-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site vitrine Nexdia — Accompagnement étudiants internationaux en France",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "nuxt": "^3.14.0"
+  },
+  "dependencies": {}
+}
